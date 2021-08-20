@@ -26,8 +26,8 @@ interface Props {
 const DayCard = ({ data }: Props) => {
   return (
     <Col className="mt-5">
-      <div className="text-center">
-        <p>
+      <div className="text-center text-white">
+        <p className="m-0">
           <Moment format="ddd" unix>
             {data.dt}
           </Moment>

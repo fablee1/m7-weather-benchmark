@@ -29,41 +29,45 @@ const MainSearch = () => {
   }
 
   return (
-    <PlacesAutocomplete value={address} onChange={handleChange} onSelect={handleSelect}>
-      {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-        <div>
-          <form onSubmit={handleSubmit}>
-            <input
-              {...getInputProps({
-                placeholder: "Search Places ...",
-                className: "location-search-input",
-              })}
-            />
-            <div className="autocomplete-dropdown-container">
-              {loading && <div>Loading...</div>}
-              {suggestions.map((suggestion) => {
-                const className = suggestion.active
-                  ? "suggestion-item--active"
-                  : "suggestion-item"
-                const style = suggestion.active
-                  ? { backgroundColor: "#fafafa", cursor: "pointer" }
-                  : { backgroundColor: "#ffffff", cursor: "pointer" }
-                return (
-                  <div
-                    {...getSuggestionItemProps(suggestion, {
-                      className,
-                      style,
-                    })}>
-                    <span>{suggestion.description}</span>
-                  </div>
-                )
-              })}
-            </div>
-            <button>Search</button>
-          </form>
-        </div>
-      )}
-    </PlacesAutocomplete>
+    <div className="d-flex justify-content-center mt-5">
+      <PlacesAutocomplete value={address} onChange={handleChange} onSelect={handleSelect}>
+        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+          <div>
+            <form onSubmit={handleSubmit}>
+              <input
+                {...getInputProps({
+                  placeholder: "Search Places ...",
+                  className: "location-search-input",
+                })}
+              />
+              <div className="autocomplete-dropdown-container">
+                {loading && <div>Loading...</div>}
+                {suggestions.map((suggestion) => {
+                  const className = suggestion.active
+                    ? "suggestion-item--active"
+                    : "suggestion-item"
+                  const style = suggestion.active
+                    ? { backgroundColor: "#fafafa", cursor: "pointer" }
+                    : { backgroundColor: "#ffffff", cursor: "pointer" }
+                  return (
+                    <div
+                      {...getSuggestionItemProps(suggestion, {
+                        className,
+                        style,
+                      })}>
+                      <span>{suggestion.description}</span>
+                    </div>
+                  )
+                })}
+              </div>
+              <span>
+                <button className="d-inline">Search</button>
+              </span>
+            </form>
+          </div>
+        )}
+      </PlacesAutocomplete>
+    </div>
   )
 }
 

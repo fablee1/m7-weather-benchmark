@@ -61,7 +61,7 @@ interface HourCardProps {
 
 const HourCard = ({ data }: HourCardProps) => {
   return (
-    <div className="text-center d-flex align-items-center flex-column">
+    <div className="text-center d-flex align-items-center flex-column text-white">
       <img
         className="m-0"
         src={`http://openweathermap.org/img/wn/${data.weather[0]?.icon}@2x.png`}
