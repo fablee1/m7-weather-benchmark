@@ -1,0 +1,37 @@
+.weatherContainer {
+  padding: 20px 25px 20px 25px;
+  border-radius: 25px;
+  background-image: url(https://iamsainikhil.com/weather-react/weather-backgrounds/cloudy-day.jpg);
+  background-size: cover;
+  margin: 75px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.weatherHeader {
+  font-size: 20px;
+  font-weight: 700;
+  font-stretch: 100%;
+  color: white;
+}
+
+.mainImage {
+  width: 150px;
+}
+
+.weatherTypeNow {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.temperatureNow {
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+}
+
+.mainInfoBlock {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
